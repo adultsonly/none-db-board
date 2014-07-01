@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="none-db-board:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="none-db-board.war">
+      <element id="artifact" artifact-name="none-db-board:war exploded" />
+    </root>
+  </artifact>
+</component>
