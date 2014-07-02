@@ -22,8 +22,6 @@ public class UserRepository {
             for (User user : users) {
                 if (uid.equals(user.getUid())) {
                     return user;
-                } else {
-                    return null;
                 }
             }
             throw new BoardException("회원정보가 없습니다.");

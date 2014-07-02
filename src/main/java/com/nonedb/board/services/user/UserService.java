@@ -35,14 +35,17 @@ public class UserService {
     }
 
     public boolean insertUserService(String uId, String pwd, String uName) {
-        String id = String.valueOf(this.findAllService().size());
+        String id = "0";
+        List<User> reslut = this.findAllService();
+        if (reslut != null) {
+            id = String.valueOf(this.findAllService().size());
+        }
         User user = this.insertUser(id, uId, pwd, uName);
         return userRepository.insert(user);
     }
 
     private User insertUser(String id, String uId, String pwd, String uName) {
         User user = new User();
-        List<User> users = new ArrayList<User>();
         user.setId(id);
         user.setuId(uId);
         user.setPwd(pwd);
